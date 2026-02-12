@@ -1,0 +1,16 @@
+.background {
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #ffff;
+    height: 40px;
+    padding: 0 15px;
+}
+ .header-logo {
+    text-decoration: none;
+    font-family: "Charm", cursive;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fbd737;
+ }
