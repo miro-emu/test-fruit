@@ -1,0 +1,185 @@
+.page-route {
+    display: flex;
+    flex-direction: row;
+    margin-left: 25%;
+    margin-top: 30px;
+}
+
+.products-page__link {
+    position: relative;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.detail-page {
+    position: relative;
+    font-size: 14px;
+}
+
+.update-form {
+    display: grid;
+    grid-template-rows: 100px 100px 150px 200px 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.form-group__image {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    padding-right: 5%;
+}
+
+.image-item {
+    width: 100%;
+}
+
+.update__error-message {
+    color: #ff0000;
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.form-group__name {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    padding-left: 5%;
+}
+
+.form-header {
+    display: block;
+    font-size: 16px;
+    color: #434343;
+    margin-bottom: 10px;
+}
+
+.form-group__price {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    padding-left: 5%;
+}
+
+.form-input__name,.form-input__price {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    padding: 0 5%;
+    color: #434343;
+}
+
+.form-group__season {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    padding-left: 5%;
+}
+
+.season-text {
+    color: #434343;
+}
+
+.form-input__checkbox {
+    display: flex;
+}
+
+.season-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 15%;
+}
+
+.season-item input {
+    display: none;
+}
+
+.custom-box {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+}
+
+.season-item input:checked+.custom-box {
+    background-color: #434343;
+    border-color: #434343;
+}
+
+.season-item input:checked+.custom-box::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.form-group__description {
+    grid-column: 2/4;
+    grid-row: 4/5;
+}
+
+.form-textarea__description {
+    width: 100%;
+    height: 140px;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    padding: 3%;
+    color: #434343;
+}
+
+.form-button {
+    grid-column: 2/4;
+    grid-row: 5/6;
+    text-align: center;
+}
+
+.form-button__back {
+    background-color: #c8c8c8;
+    display: inline-block;
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px #00000032;
+    padding-top: 12px;
+    padding-left: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 15px;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.form-button__update {
+    background-color: #fb8937;
+    display: inline-block;
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px #00000032;
+    border: none;
+    padding: 0;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 15px;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+.delete-form {
+    text-align: right;
+    margin-right: 25%;
+    margin-top: -25px;
+}
+
+.delede-button {
+    position: relative;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}

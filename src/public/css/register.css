@@ -1,0 +1,137 @@
+.register-content{
+    display: grid;
+    grid-template-rows: 100px 600px;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.register-title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    color: #434343;
+    font-size: 30px;
+}
+
+.register-form {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.form-header {
+    display: inline-block;
+    color: #434343;
+    margin-bottom: 10px;
+}
+
+.register-form__required {
+    display: inline-block;
+    text-align: center;
+    background-color: #ff0000;
+    border-radius: 3px;
+    width: 45px;
+    color: #ffff;
+    margin-left: 6px;
+}
+.register-form__multiple {
+    color: #ff0000;
+    margin-left: 6px;
+}
+
+.form-input__name,.form-input__price {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+}
+
+.form-input__image {
+    display: block;
+}
+
+.season-text {
+    color: #434343;
+}
+
+.form-input__checkbox {
+    display: flex;
+}
+
+.season-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 15%;
+}
+
+.season-item input {
+    display: none;
+}
+
+.custom-box {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+}
+
+.season-item input:checked+.custom-box {
+    background-color: #434343;
+    border-color: #434343;
+}
+
+.season-item input:checked+.custom-box::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.form-textarea__description {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+}
+
+.form-button {
+    text-align: center;
+}
+
+.form-button__back {
+    background-color: #c8c8c8;
+    display: inline-block;
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px #00000032;
+    padding-top: 12px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 15px;
+    margin-right: 3%;
+}
+
+.form-button__add {
+    background-color: #fb8937;
+    /* border-color: #fb8937; */
+    display: inline-block;
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px #00000032;
+    border: none;
+    padding: 0;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 15px;
+    margin-left: 3%;
+}

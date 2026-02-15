@@ -19,3 +19,9 @@ Route::get('/', function () {
 });
 
 Route::get('/products',[ProductController::class,'index']);
+Route::get('/products/search', [ProductController::class, 'search']);
+Route::get('/products/detail/{product}', [ProductController::class, 'edit'])->name('products.edit');
+Route::post('/products/{product}/update', [ProductController::class, 'update'])->name('products.update');
+Route::post('/products/{product}/delete', [ProductController::class, 'destroy'])->name('products.delete');
+Route::get('/products/register',[ProductController::class,'register']);
+Route::post('/products/register',[ProductController::class,'create'])->name('products.store');
