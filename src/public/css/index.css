@@ -1,12 +1,10 @@
 .product-content {
     display: flex;
     justify-content: space-between;
-    /* background-color: greenyellow; */
 }
 
 
 .product-content__side {
-    /* background-color: aqua; */
     width: 20vw;
     height: 330px;
     border-bottom: 1px solid #cacaca;
@@ -56,7 +54,6 @@
     border-right: 6px solid transparent;
     border-top: 8px solid #a9a8a8;
     content: "";
-    /* position: absolute; */
     position: relative;
     right: 18px;
     top: 18px;
@@ -102,7 +99,6 @@
 }
 
 .product-card__wrap {
-    /* background-color: red; */
     height: 93%;
 }
 
@@ -201,7 +197,6 @@
     position: absolute;
     inset: 0;
     z-index: 1000;
-    /* display: flex; */
     top: 375px;
     left: 30px;
 }

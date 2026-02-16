@@ -27,7 +27,10 @@
         </p>
 
         <label class="form-header" for="image">商品画像<span class="register-form__required">必須</span></label>
-        <input class="form-input__image"type="file" name="image" id="image" value="{{ 'image' }}">
+        <div class="image-item">
+            <img class="image-preview" id="image-preview" style="display:none;" />
+        </div>
+        <input class="form-input__image"type="file" name="image" id="image">
         <p class="register__error-message">
             @error('image')
                 {{ $message }}
@@ -69,5 +72,25 @@
         </div>
     </form>
 </div> 
+
+@section('js')
+<script>
+document.getElementById('image').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    const preview = document.getElementById('image-preview');
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function(event) {
+            preview.src = event.target.result;
+            preview.style.display = 'block';
+        }
+
+        reader.readAsDataURL(file);
+    }
+});
+</script>
+@endsection
 
 @endsection

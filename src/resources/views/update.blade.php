@@ -15,8 +15,8 @@
 <form class="update-form" action="{{ route('products.update', $product->id) }}" method="post" enctype="multipart/form-data">
 @csrf
     <div class="form-group__image">        
-        <img class="image-item" src="{{Storage::url($product->image)}}" alt="商品画像">
-        <input class="form-input__image" type="file" name="image">
+        <img class="image-preview" id="image-preview" src="{{Storage::url($product->image)}}" alt="商品画像">
+        <input class="form-input__image" id="image" type="file" name="image">
         <p class="update__error-message">
             @error('image')
                 {{ $message }}
@@ -86,4 +86,25 @@
         <i class="fas fa-trash-alt" style="color:red;"></i>
     </button>
 </form>
+
+@section('js')
+<script>
+document.getElementById('image').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    const preview = document.getElementById('image-preview');
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function(event) {
+            preview.src = event.target.result;
+            preview.style.display = 'block';
+        }
+
+        reader.readAsDataURL(file);
+    }
+});
+</script>
+@endsection
+
 @endsection
