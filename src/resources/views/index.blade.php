@@ -13,7 +13,7 @@
         <h2 class="page-title">商品一覧</h2>
         <form class="serch-form" action="/products/search" method="get">
             @csrf
-            <input class="serch-keyword" type="text" name="keyword" placeholder="商品名で検索" value="{{ old('keyword') }}">
+            <input class="serch-keyword" type="text" name="keyword" placeholder="商品名で検索" value="{{ request('keyword') }}">
             <button class="serch-button" type="submit">検索</button>
             <div class="sort-title">
                 <p class="sort-title__price">価格順で表示</p>
@@ -53,9 +53,16 @@
     </div>
 
 </div>
-
-
-
+@if ($showModal ?? '')
+    <div class="modal">
+        <div class="modal-content">
+            <p class="modal-text">
+                {{ $sortLabel }}
+            </p>
+            <a class="sort-cancel__button" href="/products">×</a>
+        </div>
+    </div>
+@endif
 
 @endsection
 

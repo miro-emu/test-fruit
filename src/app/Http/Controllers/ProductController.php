@@ -28,16 +28,25 @@ class ProductController extends Controller
         switch ($sortType) {
             case 'highest':
                 $query->orderBy('price','desc');
+                break;
             case 'lowest':
                 $query->orderBy('price','asc');
+                break;
             default:
                 $query->orderBy('id','asc');
+                break;
         }
 
         $products = $query->paginate(6)
                           ->appends($request->query());
 
-        return view('index' , compact('products'));
+        $showModal = !empty($sortType);
+        $sortLabel = [
+            'highest' => '高い順に表示',
+            'lowest' => '低い順に表示',
+        ][$sortType] ?? null;
+
+        return view('index' , compact('products','showModal','sortLabel'));
     }
 
     private function getSearchQuery($request, $query){
@@ -50,10 +59,6 @@ class ProductController extends Controller
         return $query;
     }
 
-    // モーダル
-    // $showModal = false;
-    // $selectedContact = null;
-
     // 詳細表示
     public function edit(Product $product)
     {
@@ -62,7 +67,6 @@ class ProductController extends Controller
 
         return view('update', compact('product','seasons'));
     }
-
 
     // 追加
     public function register()

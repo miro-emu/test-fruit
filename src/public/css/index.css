@@ -196,5 +196,42 @@
     border-color: #dee2e6;
 }
 
+/* モーダル */ 
+.modal {
+    position: absolute;
+    inset: 0;
+    z-index: 1000;
+    /* display: flex; */
+    top: 375px;
+    left: 30px;
+}
+
+.modal-content {
+    display: flex;
+    width: 120px;
+    height: 40px;
+    border: 2px solid #fbc737;
+    border-radius: 20px;
+    padding-left: 7px;
+}
+
+.modal-text {
+    font-size: 13px;
+    margin-top: 9px;
+}
+
+.sort-cancel__button {
+    margin-top: 9px;
+    margin-left: 5px;
+    text-decoration: none;
+    border: 2px solid #fbc737;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding-left: 3px;
+    font-size: 12px;
+    color: #fbc737;
+    font-weight: bold;
+}
 
 
