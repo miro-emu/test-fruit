@@ -34,6 +34,12 @@
 .register-form__multiple {
     color: #ff0000;
     margin-left: 6px;
+    font-size: 14px;
+}
+
+.register__error-message {
+    color: #ff0000;
+    font-size: 14px;
 }
 
 .form-input__name,.form-input__price {
